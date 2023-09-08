@@ -12,4 +12,18 @@ Every cell interacts with its eight neighbours, which are the cells that are hor
 * Any **live cell** with *more than three* live neighbours dies, as if by overpopulation.
 * Any **dead cell** with *exactly three* live neighbours becomes a live cell, as if by reproduction.
 
+## Implementation
+*Our script will have the input file name, output file name, and the number of generations as arguments.
+*It will load the initial pattern of the grid from the input file.
+*It will apply the rules for the number of generations
+*It will store the final grid in the output file.
+
+## File format
+* Grid will be read from a text file.
+* The first line of the text file indicated the width and height of the grid, unsigned integers separated space.
+* All other lines will indicate the position of the living cells. Each line will have the horizontal and vertical positions of a living cell.
+    1. The position is based on zero-indexing w/ top left cell is 0 0
+    2. Horizontal index increases from left to right
+    3. Vertical index increases from top to bottom.
+
 
