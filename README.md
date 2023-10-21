@@ -26,4 +26,46 @@ Every cell interacts with its eight neighbours, which are the cells that are hor
     2. Horizontal index increases from left to right
     3. Vertical index increases from top to bottom.
 
+## How to use this 
 
+Before you use this file you need to change some parameters within the python code main function:
+
+>
+> For game_NoNdask
+> input_path = "benchmark/1000x1000_0.1.txt" ##this is directory to your input file
+> output_path = "output_test1000x1000.txt"   ##this is directory to save your output file
+> generations = 1  ##This is for the generation
+> data_type = "int32"  ##This is to change the format of the board
+>
+
+>
+> For game_dask
+> input_path = "benchmark/1000x1000_0.1.txt" ##This is directory to your input file
+> output_path = "output_test1000x1000.txt"   ##This is the directory to save your output file
+> generations = 5 ##This is for the generation
+> chunksize = (100, 100) ##This is specify chunks
+> scheduler = "threads"  ##This is specify scheduler for DASK 
+> data_type = "int32"    ###This is to change the format of the board
+>
+
+You just need to run it in the terminal by using Python:
+>
+>python game_NoNdask.py
+>pyton game_dask.py
+>
+
+## Input/Output File
+
+The example of the input file is provided in the input example folder. The input file consists of board size and indices of the living cells.
+
+This code reads files like this:
+>
+>5 5   ##The first line is the size of the board
+>0 0   ##The rest are indices of the living cells on the board
+>2 1
+>2 2
+>3 2
+>3 4
+>
+
+The outputs files will have similar format.
