@@ -13,10 +13,10 @@ Every cell interacts with its eight neighbours, which are the cells that are hor
 * Any **dead cell** with *exactly three* live neighbours becomes a live cell, as if by reproduction.
 
 ## Implementation
-*Our script will have the input file name, output file name, and the number of generations as arguments.
-*It will load the initial pattern of the grid from the input file.
-*It will apply the rules for the number of generations
-*It will store the final grid in the output file.
+* Our script will have the input file name, output file name, and the number of generations as arguments.
+* It will load the initial pattern of the grid from the input file.
+* It will apply the rules for the number of generations
+* It will store the final grid in the output file.
 
 ## File format
 * Grid will be read from a text file.
