@@ -32,16 +32,16 @@ Before you use this file you need to change some parameters within the python co
 
 ```Phyton
 #For game_NoNdask 
-input_path = "benchmark/1000x1000_0.1.txt" ##this is directory to your input file
-output_path = "output_test1000x1000.txt"   ##this is directory to save your output file
+input_path = "input.txt" ##this is directory to your input file
+output_path = "output_test5x5.txt"   ##this is directory to save your output file
 generations = 1  ##This is for the generation
 data_type = "int32"  ##This is to change the format of the board
 ```
 
 ```Phyton
 #For game_dask <br>
-input_path = "benchmark/1000x1000_0.1.txt" ##This is directory to your input file
-output_path = "output_test1000x1000.txt"   ##This is the directory to save your output file
+input_path = "input.txt" ##This is directory to your input file
+output_path = "output_test5x5.txt"   ##This is the directory to save your output file
 generations = 5 ##This is for the generation
 chunksize = (100, 100) ##This is specify chunks
 scheduler = "threads"  ##This is specify scheduler for DASK 
@@ -69,5 +69,29 @@ This code reads files like this:
 3 4
 
 ```
+This is the content of input.txt
 
 The outputs files will have similar format.
+
+## DASK AFTERTOUGHT
+
+It is the code that was found after checking the line profiler and cprofile. It improves the loops for neighbour_count and different way to implement the Game of Life rules. To use this code, the step is is similiar with game_dask. 
+
+```Phyton
+#For game_dask_aftertought <br>
+input_path = "input.txt" ##This is directory to your input file
+output_path = "output_test5x5.txt"   ##This is the directory to save your output file
+generations = 5 ##This is for the generation
+chunksize = (100, 100) ##This is specify chunks
+scheduler = "threads"  ##This is specify scheduler for DASK 
+data_type = "int32"    ###This is to change the format of the board
+```
+In the terminal you can run it by:
+
+```bash
+python game_dask_aftertought.py
+
+```
+## DOCUMENTATION
+
+In this repository also provided a documentation that explain the benchmarking process that done.
