@@ -78,7 +78,7 @@ The outputs files will have similar format.
 It is the code that was found after checking the line profiler and cprofile. It improves the loops for neighbour_count and different way to implement the Game of Life rules. To use this code, the step is is similiar with game_dask. 
 
 ```Phyton
-#For game_dask_aftertought <br>
+#For game_dask_aftertought
 input_path = "input.txt" ##This is directory to your input file
 output_path = "output_test5x5.txt"   ##This is the directory to save your output file
 generations = 5 ##This is for the generation
